@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+<div class="text-center">
+    <h1 class="display-4">Vagas</h1>
+    <div>
+        <table id="table" class="display" style="width: 100%">
+            <thead>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/VagaScript.js"></script>
+}

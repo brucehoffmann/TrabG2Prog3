@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeVagas", "SistemaDeVagas.csproj", "{EABF736D-1AB1-4497-B0ED-23425BF382AC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EABF736D-1AB1-4497-B0ED-23425BF382AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EABF736D-1AB1-4497-B0ED-23425BF382AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EABF736D-1AB1-4497-B0ED-23425BF382AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EABF736D-1AB1-4497-B0ED-23425BF382AC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF15BDD6-98A8-4645-A292-E57AFEE5BF28}
+	EndGlobalSection
+EndGlobal

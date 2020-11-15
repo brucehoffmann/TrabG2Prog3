@@ -1,0 +1,54 @@
+﻿@model SistemaDeVagas.Models.VagaModel
+
+@{
+    ViewData["Title"] = "Adicionar Vaga";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Adicionar Vaga</h1>
+    <form method="post">
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="form-label" asp-for="Andar"></label>
+                    <input asp-for="Andar" class="form-control" name="Andar">
+                    <span asp-validation-for="Andar" class="invalid-feedback d-flex"></span>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="form-label" asp-for="Corredor"></label>
+                    <input asp-for="Corredor" class="form-control" name="Corredor">
+                    <span asp-validation-for="Corredor" class="invalid-feedback d-flex"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="form-label" asp-for="Numero">Numero da vaga</label>
+                    <input asp-for="Numero" class="form-control" name="Numero">
+                    <span asp-validation-for="Numero" class="invalid-feedback d-flex"></span>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label class="form-label" asp-for="PorteVeiculo"></label>
+                    <select asp-for="PorteVeiculo" class="form-control" data-plugin="select2-data">
+                        <option value="" selected>Selecione</option>
+                        <option value="Pequeno">Pequeno</option>
+                        <option value="Medio">Medio</option>
+                        <option value="Grande">Grande</option>
+                    </select>
+                    <span asp-validation-for="PorteVeiculo" class="invalid-feedback d-flex "></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 mt-2 text-right">
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </div>
+    </form>
+
+</div>
