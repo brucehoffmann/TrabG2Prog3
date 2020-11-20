@@ -35,12 +35,7 @@ namespace SistemaDeVagas.Controllers
 
             if (!_vagaRepository.ValidaVaga(model))
             {
-                return Json($"Vaga já cadastrada!");
-
-                //ExceptionMessage = "File error thrown";
-                //_logger.LogError(ExceptionMessage);
-
-                //return BadRequest(new { status = "failed", message = "Vaga já cadastrada!" });
+                return BadRequest(new { status = "failed", message = "Vaga já cadastrada!" });
                 //return RedirectToAction(nameof(Adicionar));
             }
             
