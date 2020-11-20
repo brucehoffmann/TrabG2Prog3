@@ -35,3 +35,40 @@ C:\Dados\Projetos Faccat Prog 3\Trab g2\SistemaDeVagas\obj\Debug\netcoreapp3.1\R
 C:\Dados\Projetos Faccat Prog 3\Trab g2\SistemaDeVagas\obj\Debug\netcoreapp3.1\Razor\Views\Vaga\Index.cshtml.g.cs
 C:\Dados\Projetos Faccat Prog 3\Trab g2\SistemaDeVagas\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Dados\Projetos Faccat Prog 3\Trab g2\SistemaDeVagas\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\bin\Debug\netcoreapp3.1\SistemaDeVagas.exe
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\bin\Debug\netcoreapp3.1\SistemaDeVagas.deps.json
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\bin\Debug\netcoreapp3.1\SistemaDeVagas.runtimeconfig.json
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\bin\Debug\netcoreapp3.1\SistemaDeVagas.runtimeconfig.dev.json
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\bin\Debug\netcoreapp3.1\SistemaDeVagas.dll
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\bin\Debug\netcoreapp3.1\SistemaDeVagas.pdb
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\bin\Debug\netcoreapp3.1\SistemaDeVagas.Views.dll
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\bin\Debug\netcoreapp3.1\SistemaDeVagas.Views.pdb
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.csprojAssemblyReference.cache
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.AssemblyInfoInputs.cache
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.AssemblyInfo.cs
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.csproj.CoreCompileInputs.cache
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.RazorAssemblyInfo.cache
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.RazorAssemblyInfo.cs
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.TagHelpers.input.cache
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.TagHelpers.output.cache
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.RazorCoreGenerate.cache
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\Razor\Views\Error.cshtml.g.cs
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\Razor\Views\Vaga\Adicionar.cshtml.g.cs
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\Razor\Views\Vaga\Index.cshtml.g.cs
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.RazorTargetAssemblyInfo.cache
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.RazorTargetAssemblyInfo.cs
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.Views.pdb
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\staticwebassets\SistemaDeVagas.StaticWebAssets.Manifest.cache
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\staticwebassets\SistemaDeVagas.StaticWebAssets.xml
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.dll
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.pdb
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.genruntimeconfig.cache
+C:\Users\camil\ProgTres\G2\TrabG2Prog3\obj\Debug\netcoreapp3.1\SistemaDeVagas.csproj.CopyComplete

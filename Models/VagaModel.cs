@@ -16,5 +16,15 @@ namespace SistemaDeVagas.Models
         public int Numero { get; set; }
         [Required(ErrorMessage = "Selecione o porte do veículo")]
         public string PorteVeiculo { get; set; }
+
+        public VagaModel() { }
+
+        public VagaModel(int andar, int corredor, int numero, string porteVeiculo)
+        {
+            Andar = andar;
+            Corredor = corredor;
+            Numero = numero;
+            PorteVeiculo = porteVeiculo;
+        }
     }
 }

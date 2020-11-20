@@ -18,6 +18,7 @@ namespace SistemaDeVagas.Controllers
         }
         public IActionResult Index()
         {
+            _vagaRepository.CreateInitial();
             return View();
         }
 
@@ -32,6 +33,17 @@ namespace SistemaDeVagas.Controllers
             if (!ModelState.IsValid)
                 return View(model);
 
+            if (!_vagaRepository.ValidaVaga(model))
+            {
+                return Json($"Vaga já cadastrada!");
+
+                //ExceptionMessage = "File error thrown";
+                //_logger.LogError(ExceptionMessage);
+
+                //return BadRequest(new { status = "failed", message = "Vaga já cadastrada!" });
+                //return RedirectToAction(nameof(Adicionar));
+            }
+            
             _vagaRepository.AddVaga(model);
             return RedirectToAction(nameof(Index));
         }

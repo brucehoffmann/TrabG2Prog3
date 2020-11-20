@@ -22,15 +22,7 @@ namespace SistemaDeVagas.Repository
 
         public void AddVaga(VagaModel model)
         {
-            var novoId = 1;
-
-            if (Vagas.Count > 0)
-            {
-                var ultimoId = Vagas.Select(v => v.Id).Max();
-                novoId = ultimoId + 1;
-            }
-
-            var novaVaga = new Vaga(novoId, false, model);
+            var novaVaga = new Vaga(CriaId(), false, model);
 
             Vagas.Add(novaVaga);
         }
@@ -42,5 +34,50 @@ namespace SistemaDeVagas.Repository
             if (vagaParaRemover != null)
                 Vagas.Remove(vagaParaRemover);
         }
+
+        public bool ValidaVaga(VagaModel model)
+        {
+            if (Vagas.Count <= 0)
+                return true;
+
+            foreach(Vaga vaga in Vagas)
+            {
+                if(vaga.Andar == model.Andar && vaga.Corredor == model.Corredor && vaga.Numero == model.Numero)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private int CriaId()
+        {
+            var novoId = 1;
+
+            if (Vagas.Count > 0)
+            {
+                var ultimoId = Vagas.Select(v => v.Id).Max();
+                novoId = ultimoId + 1;
+            }
+
+            return novoId;
+        }
+
+        public void CreateInitial()
+        {
+            var vaga1Model = new VagaModel(1, 1, 1, "Pequeno");
+            var vaga2Model = new VagaModel(1, 1, 2, "Pequeno");
+            var vaga3Model = new VagaModel(1, 1, 3, "Pequeno");
+            var vaga4Model = new VagaModel(1, 1, 4, "Pequeno");
+            var vaga5Model = new VagaModel(1, 1, 5, "Pequeno");
+
+            Vagas.Add(new Vaga(CriaId(), false, vaga1Model));
+            Vagas.Add(new Vaga(CriaId(), false, vaga2Model));
+            Vagas.Add(new Vaga(CriaId(), false, vaga3Model));
+            Vagas.Add(new Vaga(CriaId(), false, vaga4Model));
+            Vagas.Add(new Vaga(CriaId(), false, vaga5Model));
+        }
+
+
     }
 }
