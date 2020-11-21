@@ -14,6 +14,7 @@ namespace SistemaDeVagas.Repository
         public VagaRepository()
         {
             Vagas = new List<Vaga>();
+            CreateInitial();
         }
         public List<Vaga> GetVagas()
         {
@@ -27,11 +28,20 @@ namespace SistemaDeVagas.Repository
             Vagas.Add(novaVaga);
         }
 
+        public void Update(Vaga vaga)
+        {
+            Vagas.ForEach(item =>
+            {
+                if (item.Id == vaga.Id && !vaga.Ocupada)
+                    item = vaga;
+            });
+        }
+
         public void DeleteVaga(int vagaId)
         {
             var vagaParaRemover = Vagas.FirstOrDefault(v => v.Id == vagaId);
 
-            if (vagaParaRemover != null)
+            if (vagaParaRemover != null && !vagaParaRemover.Ocupada)
                 Vagas.Remove(vagaParaRemover);
         }
 
@@ -77,7 +87,5 @@ namespace SistemaDeVagas.Repository
             Vagas.Add(new Vaga(CriaId(), false, vaga4Model));
             Vagas.Add(new Vaga(CriaId(), false, vaga5Model));
         }
-
-
     }
 }
