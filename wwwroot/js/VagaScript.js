@@ -1,5 +1,6 @@
 ﻿VagaScript = (function () {
     var datatable = {};
+    var vagaIdParaRemover = 0;
 
     var start = function () {
         datatable = $('#table').DataTable({
@@ -68,7 +69,16 @@
                     title: "",
                     class: "text-center",
                     render: function (data, type, row, meta) {
-                        return `<div class='text-center'><button class="btn btn-primary" onclick="VagaScript.reservar('${row.id}')">Reservar</button></div>`;
+                        if (row.ocupada)
+                            return `<div class='text-center'>
+                                        <button class="btn btn-secondary" onclick="VagaScript.liberar('${row.id}')">Liberar</button>
+                                        <button class="btn btn-danger" onclick="VagaScript.deletar('${row.id}')"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                    </div>`;
+                        else
+                            return `<div class='text-center'>
+                                        <button class="btn btn-primary" onclick="VagaScript.ocupar('${row.id}')">Ocupar</button>
+                                        <button class="btn btn-danger" onclick="VagaScript.deletar('${row.id}')"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                    </div>`;
                     }
                 }
             ],
@@ -98,9 +108,51 @@
         });
     };
 
-    var reservar = function (vagaId) {
-        vagaId;
-        debugger
+    var ocupar = function (vagaId) {
+        $.ajax({
+            url: "/Vaga/Ocupar/" + vagaId,
+            type: "post",
+            error: function (error) {
+                var mensagemDeErro = JSON.parse(error.responseText);
+                alert(mensagemDeErro.message);
+            },
+            success: function (data, textStatus, XMLHttpRequest) {
+                datatable.ajax.reload();
+            }
+        });
+    }
+
+    var liberar = function (vagaId) {
+        $.ajax({
+            url: "/Vaga/Liberar/" + vagaId,
+            type: "post",
+            error: function (error) {
+                var mensagemDeErro = JSON.parse(error.responseText);
+                alert(mensagemDeErro.message);
+            },
+            success: function (data, textStatus, XMLHttpRequest) {
+                datatable.ajax.reload();
+            }
+        });
+    }
+
+    var deletar = function (vagaId) {
+        $("#modal").modal('show');
+        vagaIdParaRemover = vagaId;
+    }
+
+    var confirmarDelete = function () {
+        $.ajax({
+            url: "/Vaga/DeletaVaga/" + vagaIdParaRemover,
+            type: "delete",
+            error: function (error) {
+                var mensagemDeErro = JSON.parse(error.responseText);
+                alert(mensagemDeErro.message);
+            },
+            success: function (data, textStatus, XMLHttpRequest) {
+                datatable.ajax.reload();
+            }
+        });
     }
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -108,7 +160,10 @@
     });
 
     return {
-        reservar: reservar
+        ocupar: ocupar,
+        liberar: liberar,
+        deletar: deletar,
+        confirmarDelete: confirmarDelete
     };
 
 })();

@@ -23,5 +23,16 @@ namespace SistemaDeVagas.Entities
             Numero = model.Numero;
             PorteVeiculo = model.PorteVeiculo;
         }
+
+
+        public void OcuparVaga()
+        {
+            Ocupada = true;
+        }
+
+        public void LiberarVaga()
+        {
+            Ocupada = false;
+        }
     }
 }

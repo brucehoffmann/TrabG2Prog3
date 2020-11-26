@@ -35,12 +35,44 @@ namespace SistemaDeVagas.Controllers
 
             if (!_vagaRepository.ValidaVaga(model))
             {
-                return BadRequest(new { status = "failed", message = "Vaga já cadastrada!" });
-                //return RedirectToAction(nameof(Adicionar));
+                ModelState.AddModelError(string.Empty, "Vaga já cadastrada!");
+                return View(model);
+                //return BadRequest(new { status = "failed", message = "Vaga já cadastrada!" });
             }
-            
+
             _vagaRepository.AddVaga(model);
             return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost("[controller]/[action]/{id}")]
+        public IActionResult Ocupar(int id)
+        {
+            try
+            {
+                _vagaRepository.OcuparVaga(id);
+
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new { status = "failed", message = e.Message });
+            }
+
+        }
+
+        [HttpPost("[controller]/[action]/{id}")]
+        public IActionResult Liberar(int id)
+        {
+            try
+            {
+                _vagaRepository.LiberarVaga(id);
+
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new { status = "failed", message = e.Message });
+            }
         }
 
         [HttpPut]
@@ -64,20 +96,19 @@ namespace SistemaDeVagas.Controllers
             return Json(new { data = vagas, draw = 0, recordsTotal = vagas.Count(), recordsFiltered = vagas.Count() });
         }
 
-        [HttpDelete]
-        public IActionResult DeletaVaga(Vaga vaga)
+        [HttpDelete("[controller]/[action]/{id}")]
+        public IActionResult DeletaVaga(int id)
         {
-            if (vaga.Id == null)
+            try
             {
-                return BadRequest(new { status = "failed", message = "Id informado está null. Vaga não pode ser deletada!" });
-            }
-            if (vaga.Ocupada)
-            {
-                return BadRequest(new { status = "failed", message = "Vaga ocupada. Não pode ser deletada!" });
-            }
+                _vagaRepository.DeleteVaga(id);
 
-            _vagaRepository.DeleteVaga(vaga.Id);
-            return Ok(new { status = "success", message = "Vaga deletada com sucesso" });
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(new { status = "failed", message = e.Message });
+            }
         }
 
     }

@@ -9,7 +9,6 @@ C:\Dados\Projetos Faccat Prog 3\Trab g2\SistemaDeVagas\bin\Debug\netcoreapp3.1\S
 C:\Dados\Projetos Faccat Prog 3\Trab g2\SistemaDeVagas\bin\Debug\netcoreapp3.1\SistemaDeVagas.pdb
 C:\Dados\Projetos Faccat Prog 3\Trab g2\SistemaDeVagas\bin\Debug\netcoreapp3.1\SistemaDeVagas.Views.dll
 C:\Dados\Projetos Faccat Prog 3\Trab g2\SistemaDeVagas\bin\Debug\netcoreapp3.1\SistemaDeVagas.Views.pdb
-C:\Dados\Projetos Faccat Prog 3\Trab g2\SistemaDeVagas\obj\Debug\netcoreapp3.1\SistemaDeVagas.csprojAssemblyReference.cache
 C:\Dados\Projetos Faccat Prog 3\Trab g2\SistemaDeVagas\obj\Debug\netcoreapp3.1\SistemaDeVagas.AssemblyInfoInputs.cache
 C:\Dados\Projetos Faccat Prog 3\Trab g2\SistemaDeVagas\obj\Debug\netcoreapp3.1\SistemaDeVagas.AssemblyInfo.cs
 C:\Dados\Projetos Faccat Prog 3\Trab g2\SistemaDeVagas\obj\Debug\netcoreapp3.1\SistemaDeVagas.csproj.CoreCompileInputs.cache

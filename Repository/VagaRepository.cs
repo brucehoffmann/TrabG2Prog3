@@ -41,8 +41,36 @@ namespace SistemaDeVagas.Repository
         {
             var vagaParaRemover = Vagas.FirstOrDefault(v => v.Id == vagaId);
 
-            if (vagaParaRemover != null && !vagaParaRemover.Ocupada)
-                Vagas.Remove(vagaParaRemover);
+            if (vagaParaRemover == null)
+                throw new Exception("Vaga não encontrada.");
+
+            if (vagaParaRemover.Ocupada)
+                throw new Exception("Vaga está ocupada e não pode ser removida.");
+
+            Vagas.Remove(vagaParaRemover);
+        }
+
+        public void OcuparVaga(int id)
+        {
+            var vaga = Vagas.FirstOrDefault(v => v.Id == id);
+
+            if (vaga == null)
+                throw new Exception("Vaga não encontrada");
+
+            if (vaga.Ocupada)
+                throw new Exception("Vaga já está ocupada");
+
+            vaga.OcuparVaga();
+        }
+
+        public void LiberarVaga(int id)
+        {
+            var vaga = Vagas.FirstOrDefault(v => v.Id == id);
+
+            if (vaga == null)
+                throw new Exception("Vaga não encontrada");
+
+            vaga.LiberarVaga();
         }
 
         public bool ValidaVaga(VagaModel model)
@@ -50,13 +78,9 @@ namespace SistemaDeVagas.Repository
             if (Vagas.Count <= 0)
                 return true;
 
-            foreach(Vaga vaga in Vagas)
-            {
-                if(vaga.Andar == model.Andar && vaga.Corredor == model.Corredor && vaga.Numero == model.Numero)
-                {
-                    return false;
-                }
-            }
+            if(Vagas.Any(v => v.Andar == model.Andar && v.Corredor == model.Corredor && v.Numero == model.Numero))
+                return false;
+
             return true;
         }
 
